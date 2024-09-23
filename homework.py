@@ -3,7 +3,7 @@ def city_temp(city, temp):
     """Displays city and temp"""
     print(f'The temperature in {city} is {temp}')
 
-print(help(city_temp))
+#print(help(city_temp))
 city_temp("rockville", 79)
 city_temp("lisbon", 68)
 
