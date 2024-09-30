@@ -1,25 +1,11 @@
-#W3L3    
-def city_temp(city, temp):
-    """Displays city and temp"""
-    print(f'The temperature in {city} is {temp}')
+#W3
+city = input("What is the name of the city? ")
+temp = input("What is the temp in Celcius? ")
 
-#print(help(city_temp))
-city_temp("rockville", 79)
-city_temp("lisbon", 68)
+def C_to_F(temp):
+    fahrenheit = float(temp) * 9/5 + 32
+    
+    return fahrenheit
 
-
-#W3 L2
-"""
-def city_temp():
-    city = input("Which city are you in: ")
-    city = city.capitalize()
-    temp = input("What is the temp?: ")
-
-    if city and temp:
-        print(f'You are in {city} and it is currently {temp}ºF')
-    else:
-        print("Please enter both city and temp!")
-        
-city_temp()   
-city_temp()   
-"""
+rTemp = C_to_F(temp)
+print (f'It is currently {temp}ºC ({round(rTemp)}ºF) in {city}')
