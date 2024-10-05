@@ -1,4 +1,23 @@
+#WEEK 4
+#LESSON 2
+
+
+country = ["spain", "chile", "chad"]
+print(country)
+
+country.pop(2)
+print(country)
+
+country.insert(0, "canada")
+print(country)
+
+print(len(country))
+
+country.sort()
+print(country)
+
 #W3
+"""
 city = input("What is the name of the city? ")
 temp = input(f'What is the temp(in Celcius) in {city.capitalize()}? ')
 temp = int(temp)
@@ -14,3 +33,4 @@ def display(city, temp):
    
 display(city, temp) 
 
+"""
