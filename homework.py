@@ -1,3 +1,5 @@
+#These are the weekly challenges. 
+
 #WEEK 4
 #LESSON 2
 
