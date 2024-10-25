@@ -6,7 +6,10 @@ weather = {
     "humidity":77
 }
 
-print(f'It is {round(weather["temperature"])}°C in {weather["city"]}, {weather["country"]}. The humidity level is {weather["humidity"]}%.')
+
+fahrenheit = (weather["temperature"] * 9/5) + 32
+
+print(f'It is {round(weather["temperature"])}°C ({round(fahrenheit)}°F) in {weather["city"]}, {weather["country"]}. The humidity level is {weather["humidity"]}%.')
 
 #Exercise 2
 forecast = {
