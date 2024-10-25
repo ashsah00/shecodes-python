@@ -26,6 +26,6 @@ forecast = {
 
 print(f'The forecast for {forecast["city"]}, {forecast["county"]} for the next five days is:')
 index = 0
-for daily, temp in forecast.items():
-    print(f'Day {index + 1}: {forecast["daily"][index]}')
+for temp in forecast["daily"]:
+    print(f'Day {index + 1}: {round(forecast["daily"][index])}°C')
     index +=1
