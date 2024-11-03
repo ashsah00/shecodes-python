@@ -1,31 +1,24 @@
-#Exercise 1
-weather = {
-    "city":"Lisbon",
-    "country":"Portugal",
-    "temperature":17.94,
-    "humidity":77
-}
+#Ask for a city name
+#It is currently C in Paris, France
+
+import requests
+from rich import print
+
+city = input("Enter a city name...")
+key = "aabfdd47312t10fba463o35fe43c6a13"
+url = f'https://api.shecodes.io/weather/v1/current?query={city}&key={key}'
 
 
-fahrenheit = (weather["temperature"] * 9/5) + 32
+#to make api request
+request = requests.get(url)
+#print(request)  => #verify 200 response
 
-print(f'It is {round(weather["temperature"])}°C ({round(fahrenheit)}°F) in {weather["city"]}, {weather["country"]}. The humidity level is {weather["humidity"]}%.')
+#convert resonse to json
+weather = request.json()
+#print(weather)
 
-#Exercise 2
-forecast = {
-    "city":"Lisbon",
-    "county":"Portugal",
-    "daily": [
-        17.76,
-        13.08,
-        12.14,
-        11.25,
-        14.29
-    ]
-}
+temp = round(weather["temperature"]["current"])
+city = weather["city"]
+country = weather["country"]
 
-print(f'The forecast for {forecast["city"]}, {forecast["county"]} for the next five days is:')
-index = 0
-for temp in forecast["daily"]:
-    print(f'Day {index + 1}: {round(forecast["daily"][index])}°C')
-    index +=1
+print(f'It is currently {temp}°C in {city}, {country}.')
